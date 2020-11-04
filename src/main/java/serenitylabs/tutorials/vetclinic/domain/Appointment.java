@@ -1,6 +1,7 @@
 package serenitylabs.tutorials.vetclinic.domain;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Optional;
 
 public class Appointment {
@@ -9,9 +10,11 @@ public class Appointment {
     private final LocalDateTime appointmentTime;
     private final Optional<String> reason;
 
+    private  LocalTime morningAppointment = LocalTime.parse("12:00:00.00");
+    private  LocalTime afternoonAppoinment = LocalTime.parse("13:00:00.00");
+
     public static AppointmentBooker forPetCalled(String petName) {
         return new AppointmentBooker(petName);
-
     }
 
     public Appointment(String petName, String owner, LocalDateTime appointmentTime, String reason) {
@@ -42,10 +45,12 @@ public class Appointment {
         return reason;
     }
 
+
     public static class AppointmentBooker {
         private final String petName;
         private String owner;
         private String reason;
+      //  private LocalTime AppointmentType;
 
         public AppointmentBooker(String petName) {
             this.petName = petName;
@@ -64,5 +69,8 @@ public class Appointment {
             this.reason = reason;
             return this;
         }
+
+
+
     }
 }
