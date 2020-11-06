@@ -3,6 +3,7 @@ package serenitylabs.tutorials.vetclinic.playingball;
 import org.junit.Before;
 import org.junit.Test;
 import serenitylabs.tutorials.vetclinic.playingball.model.Child;
+import serenitylabs.tutorials.vetclinic.playingball.model.Player;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -24,9 +25,7 @@ public class WhenToldToPlayBall {
     public void child_should_play_cricket_if_asked() {
 
         Child bill = new Child();
-
         bill.goPlay(Cricket);
-
         assertThat(output.toString(), equalTo("Hit the wicket"));
     }
 
