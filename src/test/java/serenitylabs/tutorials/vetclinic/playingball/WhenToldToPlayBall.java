@@ -33,9 +33,7 @@ public class WhenToldToPlayBall {
     public void child_should_play_tennis_if_asked() {
 
         Child bill = new Child();
-
         bill.goPlay(Tennis);
-
         assertThat(output.toString(), equalTo("Serve the ball"));
     }
 
@@ -43,9 +41,7 @@ public class WhenToldToPlayBall {
     public void child_should_play_football_if_asked() {
 
         Child bill = new Child();
-
         bill.goPlay(Football);
-
         assertThat(output.toString(), equalTo("Kick the ball"));
     }
 
@@ -53,9 +49,7 @@ public class WhenToldToPlayBall {
     public void child_should_play_handball_if_asked() {
 
         Child bill = new Child();
-
         bill.goPlay(Handball);
-
         assertThat(output.toString(), equalTo("Throw the ball"));
     }
 
@@ -63,9 +57,7 @@ public class WhenToldToPlayBall {
     public void child_should_play_hockey_if_asked() {
 
         Child bill = new Child();
-
         bill.goPlay(Hockey);
-
         assertThat(output.toString(), equalTo("Hit the ball with the stick"));
     }
 }

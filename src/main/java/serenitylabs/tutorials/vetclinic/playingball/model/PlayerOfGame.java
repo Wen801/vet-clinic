@@ -1,7 +1,7 @@
 package serenitylabs.tutorials.vetclinic.playingball.model;
 
-//This is a factory class that produces intances of another class.
-public class PlayerForGame {
+//Player of games knows how to play each game, its a factory produce other instance.
+public class PlayerOfGame {
     public static Player called(Game game) {
         switch (game) {
             case Football:
